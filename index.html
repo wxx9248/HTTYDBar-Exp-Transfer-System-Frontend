@@ -1,0 +1,77 @@
+<!doctype html>
+<meta charset="utf-8">
+<html lang="zh">
+<head>
+    <title>经验转移系统 - 驯龙高手中文论坛</title>
+    <link href="css/index/framework.css" rel="stylesheet">
+    <link href="css/index/login.css" rel="stylesheet">
+
+    <script crossorigin="anonymous"
+            integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha512-zDvrqenA0eFJZCxBsryzUZcvihvNlEXbteMv62yRxdhR4s7K1aaz+LjsRyfk6M+YJLyAJEuuquIAI8I8GgLC8A=="
+            src="https://cdnjs.cloudflare.com/ajax/libs/jsencrypt/2.3.1/jsencrypt.min.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha512-nOQuvD9nKirvxDdvQ9OMqe2dgapbPB7vYAMrzJihw5m+aNcf0dX53m6YxM4LgA9u8e9eg9QX+/+mPu8kCNpV2A=="
+            src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+
+    <script src="js/common/notification-bar.js"></script>
+    <script src="js/index/verify.js"></script>
+</head>
+
+<body>
+<div id="notification-container">
+    <p id="notification-container-inner">
+
+    </p>
+</div>
+
+<div id="container">
+    <div id="header"></div>
+    <div id="middle">
+        <div id="login-form">
+            <form action="" id="login-form-entity" name="login-form">
+                <div class="login-group">
+                    <input class="login-input" id="ibox-uname" name="username" placeholder="用户名" type="text">
+                    <span class="login-prompt"></span>
+                </div>
+                <div class="login-group">
+                    <input class="login-input" id="ibox-pwd" name="password" placeholder="密码" type="password">
+                    <span class="login-prompt"></span>
+                </div>
+                <div class="login-group" id="ibox-tieba-id-container" style="display: none;">
+                    <input class="login-input" id="ibox-tieba-id" name="tieba-id" placeholder="贴吧ID" type="text">
+                    <span class="login-prompt"></span>
+                </div>
+                <div class="login-group" id="ibox-bduss-container" style="display: none;">
+                    <input class="login-input" id="ibox-bduss" name="BDUSS" placeholder="BDUSS值" type="password">
+                    <span class="login-prompt"></span>
+                </div>
+                <div class="login-group" id="ibox-stoken-container" style="display: none;">
+                    <input class="login-input" id="ibox-stoken" name="STOKEN" placeholder="STOKEN值" type="password">
+                    <span class="login-prompt"></span>
+                </div>
+                <div class="login-group" id="ibox-placeholder-container"
+                     style="display: none; visibility: hidden;"></div>
+                <div class="login-group" id="dummy-container">
+                </div>
+                <div class="login-group">
+                    <input class="login-button" disabled="disabled" id="btn-login" name="login" type="button"
+                           value="登录">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <p>
+            Copyright &copy; HTTYDBar, wxx9248
+        </p>
+        <p>
+            保留所有权力&nbsp;All Rights Reserved.
+        </p>
+    </footer>
+</div>
+</body>
+</html>
