@@ -138,7 +138,7 @@ function verifyUsernameAndPassword()
                             showNotificationBarWithFading("服务器返回错误信息！", "error");
                             showNotificationBar(json["message"] +
                                                 " (" +
-                                                textStatus + ", " +
+                                                "AJAX: " + textStatus + ", " +
                                                 json["code"].toString() +
                                                 ")", "error");
                             enableLoginButton();
@@ -288,7 +288,7 @@ function checkTiebaInfo()
     const bduss = $("input#ibox-bduss").val().trim();
     const stoken = $("input#ibox-stoken").val().trim().toLowerCase();
 
-    const regex_bduss = /^[A-Za-z0-9\-]{192}$/;
+    const regex_bduss = /^[A-Za-z0-9\-~]{192}$/;
     const regex_stoken = /^[a-f0-9]{64}$/;
 
     if (!checkUsernamePassword())
@@ -348,7 +348,7 @@ function submit()
                     switch (json["code"])
                     {
                         case "0":
-                            showNotificationBarWithFading("积分迁移已成功，帐户剩余积分：" + json["credit"] + "点");
+                            showNotificationBarWithFading("经验迁移已成功，帐户剩余经验：" + json["credit"] + "点");
                             break;
                         default:
                             showNotificationBarWithFading("服务器返回错误信息！", "error");
